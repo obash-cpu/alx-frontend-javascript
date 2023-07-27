@@ -1,10 +1,12 @@
-function ClassRoom(maxStudentsSize) {
-	this.maxStudentsSize = _maxStudentsSize;
-} 
-
-maxStudentsSize.prototype.countNumber = function() {
-	console.log('the number, ${this.maxStudentsSize}!');
+export default class ClassRoom {
+constructor(maxStudentsSize) {
+    this._maxStudentsSize = maxStudentsSize;
 }
 
-const myObj = new maxStudentsSize(f"fifty");
-myObj.countNumber();
+get maxStudentsSize() {
+    return this._maxStudentsSize;
+  }
+set maxStudentsSize(newSize) {
+    this._maxStudentsSize = newSize;
+  }
+}
