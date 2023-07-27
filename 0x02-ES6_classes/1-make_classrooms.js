@@ -1,11 +1,10 @@
-import ClassRoom from './0-classroom.js';
-
+// initializeRooms.js
+const ClassRoom = require('./0-classroom.js');
 
 function initializeRooms() {
-	const roomSizes = [19, 20, 34];
-	const rooms = roomSizes.map(size => new ClassRoom(size));
-	return rooms;
+  const roomSizes = [19, 20, 34];
+  const rooms = roomSizes.map(size => new ClassRoom(size));
+  return rooms;
 }
 
-
-export default initializeRooms;
+module.exports = initializeRooms;
